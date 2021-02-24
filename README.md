@@ -1,5 +1,12 @@
 # R18n Desktop
 
+[![Cirrus CI - Base Branch Build Status](https://img.shields.io/cirrus/github/r18n/r18n-desktop?style=flat-square)](https://cirrus-ci.com/github/r18n/r18n-desktop)
+[![Codecov branch](https://img.shields.io/codecov/c/github/r18n/r18n-desktop/master.svg?style=flat-square)](https://codecov.io/gh/r18n/r18n-desktop)
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/r18n/r18n-desktop.svg?style=flat-square)](https://codeclimate.com/github/r18n/r18n-desktop)
+[![Depfu](https://img.shields.io/depfu/r18n/r18n-desktop?style=flat-square)](https://depfu.com/repos/github/r18n/r18n-desktop)
+[![License](https://img.shields.io/github/license/r18n/r18n-desktop.svg?style=flat-square)](LICENSE)
+[![Gem](https://img.shields.io/gem/v/r18n-desktop.svg?style=flat-square)](https://rubygems.org/gems/r18n-desktop)
+
 A tool to translate your desktop application to several languages.
 
 It is just a wrapper for [R18n core library](https://github.com/r18n/r18n-core).
