@@ -2,6 +2,6 @@
 
 module R18n
   module Desktop
-    VERSION = '5.0.0'
+    VERSION = '5.0.1'
   end
 end
