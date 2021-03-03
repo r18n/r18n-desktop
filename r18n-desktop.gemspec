@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name     = 'r18n-desktop'
   s.version  = R18n::Desktop::VERSION
 
-  s.summary     = 'A i18n tool to translate your Ruby desktop application.'
+  s.summary     = 'A i18n tool to translate your Ruby desktop application'
   s.description = <<-DESC
     A i18n tool to translate your desktop application in several languages.
     It is just a wrapper for R18n core library.
