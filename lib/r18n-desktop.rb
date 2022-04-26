@@ -39,8 +39,8 @@ module R18n
     def from_env(translations_places = nil, manual = nil)
       ::R18n.default_places { translations_places }
       locales = Array(R18n::I18n.system_locale)
-      locales.unshift(ENV['LANG']) if ENV['LANG']
-      locales.unshift(manual)      if manual
+      locales.unshift(ENV.fetch('LANG')) if ENV['LANG']
+      locales.unshift(manual) if manual
       set ::R18n::I18n.new(locales, translations_places)
     end
   end
