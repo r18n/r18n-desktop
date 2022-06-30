@@ -20,8 +20,8 @@ module R18n
   class I18n
     def self.system_locale
       command =
-        'defaults read .GlobalPreferences AppleLanguages |' \
-        ' tr -d [:space:] | cut -c2-3'
+        'defaults read .GlobalPreferences AppleLanguages | ' \
+          'tr -d [:space:] | cut -c2-3'
       `#{command}`.chop
     end
   end
