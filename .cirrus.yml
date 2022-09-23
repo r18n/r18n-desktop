@@ -33,13 +33,25 @@ test_task:
   depends_on:
     - remark
     - rubocop
+
   <<: *ruby
+
   container:
     matrix:
       image: ruby:2.6
       image: ruby:2.7
       image: ruby:3.0
       image: ruby:3.1
-  environment:
-    CODECOV_TOKEN: ENCRYPTED[b091f85a3223c483fc44351176a6533ec80798c358760c970e69edf0558026ecb9fa3fb3f4b2cd9cd3734674dbb4e6a3]
+
   test_script: bundle exec rspec
+
+  codecov_uploader_cache:
+    folder: codecov
+    fingerprint_script:
+      - curl --no-progress-meter https://uploader.codecov.io/latest/linux/codecov.SHA256SUM
+    populate_script:
+      - mkdir -p codecov
+      - curl https://uploader.codecov.io/latest/linux/codecov -o codecov/uploader
+      - chmod +x codecov/uploader
+
+  codecov_script: codecov/uploader
