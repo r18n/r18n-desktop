@@ -6,6 +6,7 @@
       - ruby -v
       - cat Gemfile
       - cat *.gemspec
+
   install_script:
     - gem install bundler
     - bundle config set --local path 'vendor/bundle'
@@ -14,6 +15,7 @@
 remark_task:
   container:
     image: node:latest
+
   node_modules_cache:
     folder: node_modules
     fingerprint_script:
@@ -21,12 +23,15 @@ remark_task:
       - node -v
       - cat package.json
     populate_script: npm install
+
   remark_script: npm run remark
 
 rubocop_task:
   <<: *ruby
+
   container:
     image: ruby:latest
+
   rubocop_script: bundle exec rubocop
 
 test_task:
