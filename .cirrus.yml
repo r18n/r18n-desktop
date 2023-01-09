@@ -35,10 +35,6 @@ rubocop_task:
   rubocop_script: bundle exec rubocop
 
 test_task:
-  depends_on:
-    - remark
-    - rubocop
-
   <<: *ruby
 
   container:
