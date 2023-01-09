@@ -20,6 +20,7 @@ require 'fiddle/import'
 module R18n
   # I18n support for Windows.
   class I18n
+    # Module for Windows x86 (I'm not sure how it works)
     module Kernel32
       extend Fiddle::Importer
       dlload 'Kernel32'
