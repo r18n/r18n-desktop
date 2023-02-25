@@ -17,7 +17,7 @@ describe 'r18n-desktop' do
     it 'loads I18n from system environment' do
       R18n.from_env
       expect(r18n.class).to eq R18n::I18n
-      expect(r18n.locale).not_to be_empty if String == r18n.locale.class
+      expect(r18n.locale).not_to be_empty if r18n.locale.instance_of? String
       expect(R18n.get).to eq r18n
     end
 
