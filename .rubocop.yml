@@ -1,7 +1,7 @@
 require:
   - rubocop-performance
   - rubocop-rake
-  # - rubocop-rspec
+  - rubocop-rspec
 
 AllCops:
   TargetRubyVersion: 3.0
@@ -48,6 +48,9 @@ Layout/LineLength:
 Metrics/BlockLength:
   Exclude:
     - '**/spec/**/*'
+
+RSpec/NestedGroups:
+  Enabled: false
 
 # TODO: fix offenses and enable cops
 
