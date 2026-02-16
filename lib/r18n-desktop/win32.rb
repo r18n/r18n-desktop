@@ -23,6 +23,7 @@ module R18n
     # Module for Windows x86 (I'm not sure how it works)
     module Kernel32
       extend Fiddle::Importer
+
       dlload 'Kernel32'
       extern 'int GetUserDefaultLangID()'
     end
